@@ -1,0 +1,14 @@
+Assignment: Simple Image Manipulation Service
+In this assignment, you will build a simple image manipulation service. The service will accept an image (bmp, jpg, png) as input, convert it to black and white and generate a thumbnail. The manipulated images can be saved to disk.
+Estimated Time: 2-3 hours
+We want to be mindful of your time, so please don’t take more than this. The conversation we will have after is much more important than the actual code you write.
+Requirements:
+1. Image Manipulation: Implement a Python application that can read an image from a file convert it to black and white and save the converted image together with a thumbnail.
+2. Command-Line Interface (CLI): Create a command-line interface (CLI) that allows the user to specify the input image file and output file directory. Output file names may be derived from the input file. Consider using popular image processing libraries like OpenCV for Python.
+3. Image Output: Save the manipulated images to disk.
+Submission Guidelines:
+1. Create a GitHub / GitLab / ... repository for your project and commit your code into the repository. Make sure we have access (for instance by making it public).
+2. Send an email to thomas.duindam@tribusmed.com to notify us when you are done with the assignment.
+3. We must be able to run the app locally without too much hassle (we are all running Ubuntu).
+4. Remember that we are interested mostly in how you can talk about the assignment, explain your considerations etc. Don’t get stuck on any particulars, instead make sure we have something we can talk about.
+Good luck!
