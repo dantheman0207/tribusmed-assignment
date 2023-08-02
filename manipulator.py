@@ -1,5 +1,6 @@
 from numpy.typing import NDArray
 from numpy import uint8
+import os
 import cv2
 import argparse
 
@@ -73,13 +74,19 @@ def save_image(file: str, image: NDArray[uint8]) -> None:
 
 def main():
     parser = argparse.ArgumentParser(description="Image Manipulator")
-    parser.add_argument('--input', type=str, help='Input file path', default='./lena.png')
-    parser.add_argument('--output', type=str, help='Output file directory', default='./')
+    parser.add_argument('--input', type=str, help='Input file path', default='./test-images/lena.png')
+    parser.add_argument('--output', type=str, help='Output file directory', default='./test-images/output')
     args = parser.parse_args()
 
     # Access the arguments
     input_path = args.input
     output_path = args.output
+    # add trailing slash to output path if not present
+    if not output_path.endswith('/'):
+        output_path += '/'
+    # verify output path exists
+    if not os.path.exists(output_path):
+        raise FileNotFoundError(f"Output path does not exist: {output_path}")
 
     # Rest of your program here
     print(f"Loading image: {input_path} and saving to: {output_path}")
